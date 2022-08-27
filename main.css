@@ -26,74 +26,199 @@ main{
 }
 
 main aside{
-    background: black;
+    background: url(images/bg-main-mobile.png);
     color: var(--White);
     position: relative;
     height: 25%;
-    margin-bottom: 10%;
+    margin-bottom: 30%;
     
 }
 
 main aside img{
+    width: 100%;
+}
+
+main aside .back, main aside .front{
     width: 75%;
 }
 
 main aside .back{
     position: absolute;
     top: 40px;
+    right: 20px;
+}
+
+main aside .back div{
+    position: absolute;
+    top: 67px;
     right: 40px;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+main aside .front{
+    position: absolute;
+    top: 126px;
+    left: 20px;
     
 }
 
-/* main aside img:first-child{
-    margin: 10% 0% 5% 20%;
-} */
-/* main aside img:nth-child(2){
-    margin: 5% 15% 5% 5%;
-    position: absolute;
-    top: 105px;
-    right: 20px;
-}
-main aside div{
+main aside .front div{
     position: absolute;
 }
-main aside div:nth-child(3){
-    top: 210px;
-    left: 40px;
-    letter-spacing: 2px;
-    font-size: 18px;
-}
-main aside div:nth-child(4){
-    top: 243px;
-    left: 40px;
-    font-size: 14px;
-    font-weight: 300;
-}
-main aside div:nth-child(5){
-    top: 243px;
-    right: 100px;
-    font-size: 14px;
-    font-weight: 300;
-}
-main aside div:nth-child(6){
-    top: 107px;
-    right: 60px;
-    font-size: 10px;
-    letter-spacing: 2px;
-}
-main aside div:nth-child(7){
-    top: 140px;
-    left: 40px;
+
+main aside .front div:nth-child(2){
+    top: 20px;
+    left: 20px;
     background-color: var(--White);
     height: 35px;
     width: 35px;
     border-radius: 30px;
 }
-main aside div:nth-child(8){
-    top: 150px;
-    left: 90px;
+main aside .front div:nth-child(3){
+    top: 30px;
+    left: 70px;
     border: 1px solid var(--White);
     height: 15px;
     width: 15px;
     border-radius: 30px;
-} */
+}
+
+main aside .front div:nth-child(4){
+    top: 90px;
+    left: 20px;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+main aside .front div:nth-child(5){
+    top: 120px;
+    left: 20px;
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+main aside .front div:nth-child(6){
+    top: 120px;
+    right: 25px;
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+main form{
+    padding: 0 5%;
+}
+main form small{
+    color: var(--Red);
+    margin-bottom: 5%;
+    visibility: hidden;
+}
+
+main form label{
+    display: block;
+    text-transform: uppercase;
+    color: var(--Very-dark-violet);
+    letter-spacing: 2px;
+    font-size: 13px;
+    margin-bottom: 2%;
+}
+main form input{
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid var(--Light-grayish-violet);
+    border-radius: 5px;
+    margin-bottom: 2%;
+}
+main form input::placeholder{
+    color: var(--Light-grayish-violet);
+}
+
+main form input:hover{
+    border: 1px solid linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+}
+
+main form .container > div{
+    display: flex;
+    gap: 6px;
+    align-items: flex-end;
+}
+main form .inputBlock{
+    width: 70%;
+}
+
+main form .inputs{
+    display: flex;
+    gap: 8px;
+}
+
+main button{
+    margin-top: 5%;
+    width: 100%;
+    padding: 5%;
+    background: var(--Very-dark-violet);
+    color: var(--White);
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+
+main .verified{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+}
+main .verified h2{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+main .verified p{
+    color: var(--Dark-grayish-violet);
+}
+
+
+@media (min-width: 1440px){
+    main{
+        display: flex;
+    }
+    main aside{
+        height: 100%;
+        width: 25%;
+        background: url(images/bg-main-desktop.png);
+    }
+
+    main aside .back, main aside .front{
+        width: 80%;
+    }
+
+    main aside .back{
+        top:50%;
+        left: 60%;
+    }
+    main aside .front{
+        top: 25%;
+        left: 40%;
+    }
+    main form{
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    main form .container{
+        width: 30%;
+    }
+
+    main form .container button{
+        padding: 3%;
+    }
+
+}

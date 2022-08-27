@@ -8,6 +8,7 @@
   
   <title>Frontend Mentor | Interactive card details form</title>
 
+  <script defer src="main.js"></script>
 </head>
 <body>
 
@@ -30,32 +31,45 @@
     </aside>
   
     <form>
-      <label>Cardholder Name</label>
-      <input type="text" placeholder="e.g. Jane Appleseed"> 
-    
-      <label>Card Number</label>
-      <input type="number" placeholder="e.g. 1234 5678 9123 0000"> 
-    
-      <div>
-        <label>Exp. Date (MM/YY)</label>
-        <input type="text" placeholder="MM">
-        <input type="text" placeholder="YY">
+      <div class="container">
+        <label>Cardholder Name</label>
+        <input type="text" placeholder="e.g. Jane Appleseed"> 
+        <small>Can't be blank</small>
       
-        <label>CVC</label>
-        <input type="number" placeholder="e.g. 123"> 
+        <label>Card Number</label>
+        <input type="text" placeholder="e.g. 1234 5678 9123 0000"> 
+        <small>Can't be blank</small>
+      
+        <div>
+          <div class="inputBlock">
+            <label>Exp. Date (MM/YY)</label>
+            <div class="inputs">
+              <input type="text" placeholder="MM">
+              <input type="text" placeholder="YY">
+            </div>
+            <small>Can't be blank</small>
+          </div>
+        
+          <div class="inputBlock">
+            <label>CVC</label>
+            <input type="number" placeholder="e.g. 123" >
+            <small>Can't be blank</small> 
+          </div>
+        </div>
+      
+        <button>Confirm</button>
       </div>
-    
-      <button>Confirm</button>
     </form>
   
-    <div>
-      Thank you!
-      We've added your card details
-      Continue
+    <div class="verified">
+      <img src="images/icon-complete.svg" alt="complete">
+      <h2>Thank you!</h2>
+      <p>We've added your card details</p>
+      <button>Continue</button>
     </div>
   </main>
 
 
-  <script src="main.js"></script>
+  
 </body>
 </html>
