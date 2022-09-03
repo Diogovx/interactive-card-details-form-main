@@ -26,7 +26,9 @@ main{
 }
 
 main aside{
-    background: url(images/bg-main-mobile.png);
+    background: url(images/bg-main-mobile.png) no-repeat;
+    background-position: center;
+    background-size: cover;
     color: var(--White);
     position: relative;
     height: 25%;
@@ -184,7 +186,7 @@ main .verified p{
 }
 
 
-@media (min-width: 1440px){
+@media (min-width: 1024px){
     main{
         display: flex;
     }
